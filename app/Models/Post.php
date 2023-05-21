@@ -47,5 +47,13 @@ class Post
          return $posts->firstWhere('slug', $slug);
     }
 
+    public static function findOrfield($slug){
+        $post = static::find($slug);
+        if(!$post){
+            throw new ModelNotFoundException();
+        }
+        return $post;
+    }
+
 
 }
