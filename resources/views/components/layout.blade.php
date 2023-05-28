@@ -27,32 +27,20 @@
             <label for="search" class="sr-only">Search</label>
             <div class="relative flex gap-x-4">
               
-              <!-- create a category button to find post as cotegory -->
-
-              <!-- drop down of category -->
-
-                <div x-data="{show: false}" @click.away="show = false" >
-                    <button @click=" show = ! show "
-                     class=" rounded-md border-0 bg-white py-1.5 pl-10 pr-3 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6 pl-5 " 
-                     >{{ isset($currentCategory) ? ucwords($currentCategory->name): 'Categories'}}</button>
-                    <div x-show="show" class="py-2 absolute bg-gray-100  mt-2 rounded-md" style="display: none">
-                    <a href="/" 
-                     class="block text-left px-3 text-sm leading-6 hover:bg-gray-300 focus-bg-gray-300"
-                     >All</a>
-                     @foreach($categories as $category)
-                     <a href="/categories/{{ $category->slug }}" 
-                     class="block text-left px-3 text-sm leading-6 hover:bg-gray-300 focus-bg-gray-300
-                     {{ isset($currentCategory) && $currentCategory->id === $category->id ? 'bg-gray-400' : '' }}"
-                     >{{ ucwords( $category->name )}}</a>
-                      @endforeach
-                    </div>
-                </div>  
-                  
-                
-
-             
-
-
+              
+        <x-dropdown>
+          <x-slot name="trigger">
+              <button
+                  class=" rounded-md border-0 bg-white py-1.5 pl-10 pr-3 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6 pl-5 " 
+                  >{{ isset($currentCategory) ? ucwords($currentCategory->name): 'Categories'}}
+              </button>
+          </x-slot>
+              <x-dropdown-item href="/">All</x-dropdown-item>
+               @foreach($categories as $category)
+                    <x-dropdown-item href="/categories/{{ $category->slug }}">{{ ucwords( $category->name )}}</x-dropdown-item>
+                @endforeach
+              </x-dropdown>
+              
                 <input id="search" name="search" class="block w-full rounded-md border-0 bg-white py-1.5 pl-10 pr-3 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6" placeholder="Search" type="search">
                 <input id="Filter" name="Filter" class="block w-full rounded-md border-0 bg-white py-1.5 pl-10 pr-3 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6" placeholder="Filter" type="search">
               
