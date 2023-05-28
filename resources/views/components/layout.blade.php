@@ -31,12 +31,20 @@
 
               <!-- drop down of category -->
 
-                <div x-data="{show: false}" >
-                    <button @click=" show = ! show " class="py-2 pl-3 pr-9 text-sm font-semibold border-0 bg-white rounded-md " >Categories</button>
-                    <div x-show="show" class="py-2 absolute bg-gray-100  mt-2 rounded-md">
-                      <a href="#" class="block text-left px-3 text-sm leading-6 hover:bg-gray-300 focus-bg-gray-300">Your Profile</a>
-                      <a href="#" class="block text-left px-3 text-sm leading-6 hover:bg-gray-300 focus-bg-gray-300">Settings</a>
-                      <a href="#" class="block text-left px-3 text-sm leading-6 hover:bg-gray-300 focus-bg-gray-300">Sign out</a>
+                <div x-data="{show: false}" @click.away="show = false" >
+                    <button @click=" show = ! show "
+                     class=" rounded-md border-0 bg-white py-1.5 pl-10 pr-3 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6 pl-5 " 
+                     >{{ isset($currentCategory) ? ucwords($currentCategory->name): 'Categories'}}</button>
+                    <div x-show="show" class="py-2 absolute bg-gray-100  mt-2 rounded-md" style="display: none">
+                    <a href="/" 
+                     class="block text-left px-3 text-sm leading-6 hover:bg-gray-300 focus-bg-gray-300"
+                     >All</a>
+                     @foreach($categories as $category)
+                     <a href="/categories/{{ $category->slug }}" 
+                     class="block text-left px-3 text-sm leading-6 hover:bg-gray-300 focus-bg-gray-300
+                     {{ isset($currentCategory) && $currentCategory->id === $category->id ? 'bg-gray-400' : '' }}"
+                     >{{ ucwords( $category->name )}}</a>
+                      @endforeach
                     </div>
                 </div>  
                   
