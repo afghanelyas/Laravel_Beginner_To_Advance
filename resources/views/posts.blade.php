@@ -3,10 +3,6 @@
 @section('content')
     
     @foreach ($posts as $post)
-
-        <!-- // create a categroy form -->
-        
-
         <article class="bg-white border border-gray-200 mb-5 p-5 text-lg shadow-md leading-loose ">
             <h2 class="text-2xl underline">
                 <a href="/posts/{{ $post->slug }}">{!! $post->title !!}</a>
