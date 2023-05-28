@@ -27,7 +27,7 @@
             <label for="search" class="sr-only">Search</label>
             <div class="relative flex gap-x-4">
               
-              
+              <!-- category -->
         <x-dropdown>
           <x-slot name="trigger">
               <button
@@ -43,7 +43,19 @@
               @endforeach
             </x-dropdown>
               
-                <input id="search" name="search" class="block w-full rounded-md border-0 bg-white py-1.5 pl-10 pr-3 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6" placeholder="Search" type="search">
+
+              <!-- search -->
+              <form method="GET" action="#">
+                  <input 
+                        id="search"
+                        name="search" 
+                        value="{{ request('search') }}"
+                        class="block w-full rounded-md border-0 bg-white py-1.5 pl-10 pr-3 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6"
+                        placeholder="Search" 
+                        type="search">
+              </form>
+
+
                 <input id="Filter" name="Filter" class="block w-full rounded-md border-0 bg-white py-1.5 pl-10 pr-3 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6" placeholder="Filter" type="search">
               
             </div>
