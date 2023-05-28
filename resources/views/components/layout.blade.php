@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/app.css">
     <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
     <title>My blog</title>
 </head>
 <body class="max-w-5xl m-auto">
@@ -14,7 +16,7 @@
     <div class="relative flex justify-between lg:gap-8 xl:grid xl:grid-cols-12">
       <div class="flex md:absolute md:inset-y-0 md:left-0 lg:static xl:col-span-2">
         <div class="flex flex-shrink-0 items-center">
-          <a href="#">
+          <a href="/">
             <img class="block h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="Your Company">
           </a>
         </div>
@@ -27,8 +29,22 @@
               
               <!-- create a category button to find post as cotegory -->
 
-              <select id="category" name="category" class=" w-full rounded-md border-0 bg-white py-1.5 pl-10 pr-3 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6">
-            
+              <!-- drop down of category -->
+
+                <div x-data="{show: false}" >
+                    <button @click=" show = ! show " class="py-2 pl-3 pr-9 text-sm font-semibold border-0 bg-white rounded-md " >Categories</button>
+                    <div x-show="show" class="py-2 absolute bg-gray-100  mt-2 rounded-md">
+                      <a href="#" class="block text-left px-3 text-sm leading-6 hover:bg-gray-300 focus-bg-gray-300">Your Profile</a>
+                      <a href="#" class="block text-left px-3 text-sm leading-6 hover:bg-gray-300 focus-bg-gray-300">Settings</a>
+                      <a href="#" class="block text-left px-3 text-sm leading-6 hover:bg-gray-300 focus-bg-gray-300">Sign out</a>
+                    </div>
+                </div>  
+                  
+                
+
+             
+
+
                 <input id="search" name="search" class="block w-full rounded-md border-0 bg-white py-1.5 pl-10 pr-3 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6" placeholder="Search" type="search">
                 <input id="Filter" name="Filter" class="block w-full rounded-md border-0 bg-white py-1.5 pl-10 pr-3 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6" placeholder="Filter" type="search">
               
