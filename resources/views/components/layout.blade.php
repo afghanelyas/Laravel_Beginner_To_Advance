@@ -32,7 +32,10 @@
               
 
               <!-- search -->
-              <form method="GET" action="#">
+              <form method="GET" action="/">
+                @if (request('category'))
+                    <input type="hidden" name="category" value="{{ request('category') }}">
+                @endif
                   <input 
                         id="search"
                         name="search" 
