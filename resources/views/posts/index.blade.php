@@ -17,4 +17,12 @@
             </div>
         </article>
     @endforeach
+
+    @if($posts->count())
+        <div class="mb-5">
+            {{ $posts->links() }}
+        </div>
+    @else
+        <p class="text-center">No posts yet. Please check back later.</p>
+    @endif
 @endsection 

@@ -133,6 +133,7 @@
   </nav>
 </header>
 
+
    @yield('content')
 </body>
 </html>
