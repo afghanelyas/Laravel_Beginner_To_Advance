@@ -8,7 +8,7 @@
         </h1>
 
         <p>
-            By <a href="/authors/{{ $post->author->name }}" class="underline"> {{ $post->author->name }} in </a> <a href="/categories/{{ $post->category->slug }}" class="underline">{{ $post->category->name }}</a>
+                <a href="/?author={{ $post->author->username }}" class="underline"> {{ $post->author->name }} </a>
         </p>
 
         <div>
