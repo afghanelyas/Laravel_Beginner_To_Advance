@@ -90,8 +90,21 @@
                 <button type="submit" class="bg-blue-400 mt-4 text-white rounded py-2 px-4 hover:bg-blue-500 mr-4">
                     Submit
                 </button>
-        </div>
 
+            
+        </div>
+    </form>
+    @if($errors->any())
+        <div class="mb-6">
+            <ul>
+                @foreach($errors->all() as $error)
+                    <li class="text-red-500 text-xs">{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    
+    @endif
+       
         
 
 </main>
