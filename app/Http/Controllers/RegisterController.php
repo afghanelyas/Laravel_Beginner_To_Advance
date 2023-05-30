@@ -20,6 +20,7 @@ class RegisterController extends Controller
         ]);
 
         User::create($attribute);
+        session()->flash('success' , 'you are sucessfull registered');
         return redirect()->route('home');
        
     }

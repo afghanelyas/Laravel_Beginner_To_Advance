@@ -1,9 +1,10 @@
 @extends('components.layout')
 
 @section('content')
-    
+
+    <x-flash />
     @foreach ($posts as $post)
-        <article class="bg-white border border-gray-200 mb-5 p-5 text-lg shadow-md leading-loose ">
+        <article class="bg-white border mt-10 border-gray-200 mb-5 p-5 text-lg shadow-md leading-loose ">
             <h2 class="text-2xl underline">
                 <a href="/posts/{{ $post->slug }}">{!! $post->title !!}</a>
             </h2>
@@ -25,4 +26,5 @@
     @else
         <p class="text-center">No posts yet. Please check back later.</p>
     @endif
+
 @endsection 

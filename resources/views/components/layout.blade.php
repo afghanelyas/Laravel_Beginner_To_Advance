@@ -11,7 +11,7 @@
     <title>My blog</title>
 </head>
 <body class="max-w-5xl m-auto">
-<header class="bg-white relative w-full shadow-sm lg:static lg:overflow-y-visible">
+<header class="bg-white relative w-full mb-20 shadow-sm lg:static lg:overflow-y-visible">
   <div class="mx-auto px-4 sm:px-6 lg:px-8">
     <div class="relative flex justify-between lg:gap-8 xl:grid xl:grid-cols-12">
       <div class="flex md:absolute md:inset-y-0 md:left-0 lg:static xl:col-span-2">
@@ -135,7 +135,7 @@
 
 
 @yield('content')
-
+<!-- craete a footer -->
 
 </body>
 </html>
