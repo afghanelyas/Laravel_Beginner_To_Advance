@@ -55,7 +55,7 @@
       
       <div class="hidden lg:flex lg:items-center lg:justify-end xl:col-span-4">
         @auth
-          <span> Welcome, {{ auth()->user()->name }}</span>
+          <span class="font-bold">{{ auth()->user()->name }}</span>
           <form method="POST" action="/logout" class="ml-5">
             @csrf
             <button type="submit" class="ml-5 flex-shrink-0 rounded-full bg-white p-1 text-gray-500 font-bold hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">

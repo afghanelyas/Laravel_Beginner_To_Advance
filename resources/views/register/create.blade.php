@@ -7,7 +7,6 @@
 <h1 class="text-center font-bold text-xl mb-6 ">Register!</h1>
     <form method="POST" action="/register" class="max-w-xl m-auto">
         @csrf
-
         <div class="mb-6">
             <label for="name" class="block mb-2 uppercase font-bold text-xs text-gray-700">
                 Name
@@ -104,8 +103,5 @@
         </div>
     
     @endif
-       
-        
-
 </main>
 @endsection
