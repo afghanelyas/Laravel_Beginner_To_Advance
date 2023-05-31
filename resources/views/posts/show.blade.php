@@ -1,22 +1,32 @@
 @extends('components.layout')
 
 @section('content')
-    <article class="bg-white border border-gray-200 mb-5 p-5 text-lg shadow-md leading-loose ">
+<article class="bg-white border border-gray-200 mb-5 p-5 text-lg shadow-md leading-loose ">
 
-        <h1 class="text-2xl underline">
-            {{ $post->title }}
-        </h1>
+    <h1 class="text-2xl underline">
+        {{ $post->title }}
+    </h1>
 
-        <p>
-                <a href="/?author={{ $post->author->username }}" class="underline"> {{ $post->author->name }} </a>
-        </p>
+    <p>
+        <a href="/?author={{ $post->author->username }}" class="underline"> {{ $post->author->name }} </a>
+    </p>
 
-        <div>
-            {!! $post->body !!}
-        </div>
+    <div>
+        {!! $post->body !!}
+    </div>
 
-        <a href="/" class="underline" >Go Back</a>
-        
-    </article>
+    <a href="/" class="underline">Go Back</a>
 
-@endsection 
+</article>
+<div class="bg-white border border-gray-200 space-y-4 mb-10 rounded-md shadow-lg p-4">
+<x-post-comment />
+</div>
+<div class="bg-white border border-gray-200 space-y-4 mb-10 rounded-md shadow-lg p-4">
+<x-post-comment />
+</div>
+<div class="bg-white border border-gray-200 space-y-4 mb-10 rounded-md shadow-lg p-4">
+<x-post-comment />
+</div>
+
+
+@endsection
