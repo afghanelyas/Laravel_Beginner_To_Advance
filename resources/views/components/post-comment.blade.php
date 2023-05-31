@@ -16,8 +16,7 @@
             </div>
 
             {{$comment->body}}
-
-
+            
         </div>
     </figure>
 </div>
