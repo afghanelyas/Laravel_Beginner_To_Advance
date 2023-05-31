@@ -19,7 +19,10 @@
 
 </article>
 
-<x-post-comment />
-<x-post-comment />
+
+@foreach ($post->comments as $comment)
+<x-post-comment :comment="$comment" />
+@endforeach
+
 
 @endsection

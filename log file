@@ -1,0 +1,31 @@
+[90m= [39m[34;4mApp\Models\Post[39;24m {#7227
+    [34mid[39m: [35m34[39m,
+    [34muser_id[39m: [35m78[39m,
+    [34mcategory_id[39m: [35m42[39m,
+    [34mtitle[39m: "[32mVelit nesciunt expedita eveniet fuga est.[39m",
+    [34mslug[39m: "[32mnostrum-praesentium-deserunt-atque-est-vero-porro[39m",
+    [34mexcerpt[39m: "[32mEa corporis et exercitationem voluptates error deserunt.[39m",
+    [34mbody[39m: "[32mDeleniti harum quae repellat rerum. Est porro beatae id et neque ut. Esse qui nobis nemo repellat maxime tempore iste.[39m",
+    [34mcreated_at[39m: "[32m2023-05-31 04:46:53[39m",
+    [34mupdated_at[39m: "[32m2023-05-31 04:46:53[39m",
+    [34mpublished_at[39m: [36mnull[39m,
+    [34mcategory[39m: [34;4mApp\Models\Category[39;24m {#7235
+      [34mid[39m: [35m42[39m,
+      [34mname[39m: "[32mnecessitatibus[39m",
+      [34mslug[39m: "[32mquos-sapiente-id-libero-ratione-ut-reiciendis-sed-mollitia[39m",
+      [34mcreated_at[39m: "[32m2023-05-31 04:46:53[39m",
+      [34mupdated_at[39m: "[32m2023-05-31 04:46:53[39m",
+    },
+    [34mauthor[39m: [34;4mApp\Models\User[39;24m {#7239
+      [34mid[39m: [35m78[39m,
+      [34musername[39m: "[32mnyost[39m",
+      [34mname[39m: "[32mProf. Nola Dare[39m",
+      [34memail[39m: "[32mjhamill@example.org[39m",
+      [34memail_verified_at[39m: "[32m2023-05-31 04:46:53[39m",
+      #[33mpassword[39m: "[32m$2y$10$zBNX.FU.f5.bhSU/1.mlQenNhet/2mJfBfeMPdxPlvGqXQ0gJOWbm[39m",
+      #[33mremember_token[39m: "[32mzNzT8RDchN[39m",
+      [34mcreated_at[39m: "[32m2023-05-31 04:46:53[39m",
+      [34mupdated_at[39m: "[32m2023-05-31 04:46:53[39m",
+    },
+  }
+

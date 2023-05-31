@@ -1,0 +1,31 @@
+[90m= [39m[34;4mApp\Models\Post[39;24m {#7230
+    [34mid[39m: [35m31[39m,
+    [34muser_id[39m: [35m75[39m,
+    [34mcategory_id[39m: [35m39[39m,
+    [34mtitle[39m: "[32mVoluptas nihil non at beatae sunt ut.[39m",
+    [34mslug[39m: "[32mnon-repellat-aspernatur-et-id-dolor-labore[39m",
+    [34mexcerpt[39m: "[32mOdio consequatur totam veniam vel magnam illum deleniti cupiditate.[39m",
+    [34mbody[39m: "[32mNobis pariatur accusantium in inventore eos. Unde ut exercitationem dolores maxime aut. Necessitatibus et et ratione sit omnis iure.[39m",
+    [34mcreated_at[39m: "[32m2023-05-31 04:46:38[39m",
+    [34mupdated_at[39m: "[32m2023-05-31 04:46:38[39m",
+    [34mpublished_at[39m: [36mnull[39m,
+    [34mcategory[39m: [34;4mApp\Models\Category[39;24m {#7238
+      [34mid[39m: [35m39[39m,
+      [34mname[39m: "[32mid[39m",
+      [34mslug[39m: "[32mdolorem-neque-tempore-laborum-animi-non-soluta-vero[39m",
+      [34mcreated_at[39m: "[32m2023-05-31 04:46:38[39m",
+      [34mupdated_at[39m: "[32m2023-05-31 04:46:38[39m",
+    },
+    [34mauthor[39m: [34;4mApp\Models\User[39;24m {#7242
+      [34mid[39m: [35m75[39m,
+      [34musername[39m: "[32mwolff.nico[39m",
+      [34mname[39m: "[32mMiss Zoie Hayes[39m",
+      [34memail[39m: "[32mrempel.hershel@example.net[39m",
+      [34memail_verified_at[39m: "[32m2023-05-31 04:46:38[39m",
+      #[33mpassword[39m: "[32m$2y$10$zwZTWdMbbbg0KiNUnszNB.z.I4sBPj6CDtx7qjIVmPHCc8LcBrcrG[39m",
+      #[33mremember_token[39m: "[32mspwFVWdgMv[39m",
+      [34mcreated_at[39m: "[32m2023-05-31 04:46:38[39m",
+      [34mupdated_at[39m: "[32m2023-05-31 04:46:38[39m",
+    },
+  }
+

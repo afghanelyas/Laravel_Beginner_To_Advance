@@ -3,6 +3,7 @@
 namespace App\Models;
 use App\Models\Category;
 use App\Models\User;
+use App\Models\PostComment;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
@@ -36,6 +37,10 @@ class Post extends Model
                 )
         );
         
+    }
+
+    public function comments(){
+        return $this->hasMany(PostComment::class);
     }
 
     public function category(){
