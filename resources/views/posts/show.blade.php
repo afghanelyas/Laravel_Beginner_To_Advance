@@ -18,15 +18,8 @@
     <a href="/" class="underline">Go Back</a>
 
 </article>
-<div class="bg-white border border-gray-200 space-y-4 mb-10 rounded-md shadow-lg p-4">
-<x-post-comment />
-</div>
-<div class="bg-white border border-gray-200 space-y-4 mb-10 rounded-md shadow-lg p-4">
-<x-post-comment />
-</div>
-<div class="bg-white border border-gray-200 space-y-4 mb-10 rounded-md shadow-lg p-4">
-<x-post-comment />
-</div>
 
+<x-post-comment />
+<x-post-comment />
 
 @endsection

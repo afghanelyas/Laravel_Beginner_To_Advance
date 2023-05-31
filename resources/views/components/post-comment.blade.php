@@ -1,3 +1,5 @@
+<div class="bg-white border border-gray-200 space-y-4 mb-10 rounded-md shadow-lg p-4">
+
 <figure class="md:flex rounded-xl p-8  md:p-0">
     <img class="w-24 h-24 md:w-48 md:h-auto md:rounded-none rounded-full mx-auto p-4" src="https://i.pravatar.cc/60"
         alt="" width="384" height="512">
@@ -19,3 +21,4 @@
         </blockquote>
     </div>
 </figure>
+</div>
