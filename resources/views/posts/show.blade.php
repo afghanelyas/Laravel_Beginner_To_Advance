@@ -22,7 +22,7 @@
 <!-- create design form for comment -->
 
 @auth
-<form action="/posts/{{ $post->slug }}/comments" method="POST" class="border  border-gray-200 p-6  rounded-xl">
+<form action="/posts/{{ $post->slug }}/comments" method="POST" class="border mb-6 border-gray-200 p-6  rounded-xl">
     @csrf
 
     <header class="flex items-center">
@@ -54,6 +54,3 @@
 @endforeach
 
 @endsection
-
-
-when i submit the form i logout and nothing happen
