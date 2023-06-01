@@ -86,11 +86,7 @@
 
     @yield('content')
 
-
     <footer class="bg-gray-200 rounded-md p-20 shadow-md mb-10 flex justify-center  ">
-
-            
-        
         <form class=" sm:flex sm:max-w-md">
             <label for="email-address" class="sr-only">Email address</label>
             <input type="email" name="email-address" id="email-address" autocomplete="email" required
@@ -102,11 +98,6 @@
             </div>
         </form>
     </footer>
-
-
-
-
-
 
 </body>
 
