@@ -1,7 +1,7 @@
 @extends('components.layout')
 
 @section('content')
-<article class="bg-white border border-gray-200 mb-5 p-5 text-lg shadow-md leading-loose ">
+<article class="bg-white border border-gray-200 mb-10 p-5 text-lg shadow-md leading-loose ">
 
     <h1 class="text-2xl underline">
         {{ $post->title }}
@@ -21,7 +21,8 @@
 
 <!-- create design form for comment -->
 
-<form action="/posts/{{ $post->slug }}/comments" method="POST" class="border border-gray-200 p-6 rounded-xl">
+@auth
+<form action="/posts/{{ $post->slug }}/comments" method="POST" class="border  border-gray-200 p-6  rounded-xl">
     @csrf
 
     <header class="flex items-center">
@@ -40,11 +41,19 @@
     </div>
 
 </form>
+@else
+<p class="font-semibold">
+    <a href="/login" class="underline">Login</a> to leave a comment
+</p>
+@endauth
+
+
 <!-- foreach the comments -->
-<section class="col-span-8 col-start-5 mt-10 space-y-6">
-    @foreach ($post->comment as $comment)
-    <x-post-comment :comment="$comment" />
-    @endforeach
-</section>
+@foreach ($post->comment as $comment)
+<x-post-comment :comment="$comment" />
+@endforeach
 
 @endsection
+
+
+when i submit the form i logout and nothing happen

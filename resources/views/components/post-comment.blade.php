@@ -11,7 +11,7 @@
                     {{ $comment->author->username }}
                 </div>
                 <div class="text-slate-700 dark:text-slate-500">
-                    {{$comment->created_at}}
+                    {{$comment->created_at->diffForHumans()}}
                 </div>
             </div>
 

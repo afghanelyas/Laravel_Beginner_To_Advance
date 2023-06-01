@@ -63,6 +63,7 @@
                             class="ml-5 flex-shrink-0 rounded-full bg-white p-1 text-gray-500 font-bold hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
                             LOGOUT
                         </button>
+                    </form>
                         @else
                         <a href="/register"
                             class="ml-5 flex-shrink-0 rounded-full bg-white p-1 font-bold text-gray-500 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
