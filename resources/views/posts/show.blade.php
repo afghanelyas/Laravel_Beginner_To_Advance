@@ -21,7 +21,7 @@
 
 <!-- create design form for comment -->
 
-<form action="#" method="POST" class="border border-gray-200 p-6 rounded-xl">
+<form action="/posts/{{ $post->slug }}/comments" method="POST" class="border border-gray-200 p-6 rounded-xl">
     @csrf
 
     <header class="flex items-center">
@@ -40,9 +40,11 @@
     </div>
 
 </form>
-
-@foreach ($post->comments as $comment)
-<x-post-comment :comment="$comment" />
-@endforeach
+<!-- foreach the comments -->
+<section class="col-span-8 col-start-5 mt-10 space-y-6">
+    @foreach ($post->comment as $comment)
+    <x-post-comment :comment="$comment" />
+    @endforeach
+</section>
 
 @endsection
