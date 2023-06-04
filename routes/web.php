@@ -14,8 +14,8 @@ $mailchimp->setConfig([
 	'server' => 'us10'
 ]);
 $response = $mailchimp->lists->addListMember("f38c3f622b", [
-    "email_address" => "hamid@gmail.com",
-    "status" => "pending",
+    "email_address" => "qurbansi@gmail.com",
+    "status" => "subscribed",
 ]);
 dd($response);
 });
