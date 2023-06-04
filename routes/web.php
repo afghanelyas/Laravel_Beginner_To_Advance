@@ -6,18 +6,27 @@ use App\Http\Controllers\PostCommentController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\SessionController;
 
-Route::get('ping', function(){
+Route::post('newslatters', function(){
+    request()->validate(['email' => 'required|email']);
     $mailchimp = new \MailchimpMarketing\ApiClient();
 
 $mailchimp->setConfig([
 	'apiKey' => config('services.mailchimp.key'),
 	'server' => 'us10'
 ]);
-$response = $mailchimp->lists->addListMember("f38c3f622b", [
-    "email_address" => "qurbansi@gmail.com",
-    "status" => "subscribed",
-]);
-dd($response);
+try {
+    $response = $mailchimp->lists->addListMember("f38c3f622b", [
+        "email_address" => request('email'),
+        "status" => "subscribed",
+    ]);
+    
+} catch (\Exception $e) {
+    throw \Illuminate\Validation\ValidationException::withMessages([
+        'email' => 'This email could not be added to our newsletter list.'
+    ]);
+}
+return redirect('/')
+        ->with('success', 'Thank you for subscribing to our newsletter!');
 });
 
 
