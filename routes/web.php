@@ -14,12 +14,12 @@ $mailchimp->setConfig([
 	'server' => 'us10'
 ]);
 $response = $mailchimp->lists->addListMember("f38c3f622b", [
-    'email_address' => 'elyas@gmail.com',
-    'status' => 'succes'
-    
+    "email_address" => "hamid@gmail.com",
+    "status" => "pending",
 ]);
 dd($response);
 });
+
 
 
 Route::get('/', [PostController::class, 'index'])->name('home');
