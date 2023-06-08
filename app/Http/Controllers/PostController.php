@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Category;
 use App\Models\Post;
 use App\Models\User;
+use Illuminate\Http\Response;
 
 use Illuminate\Http\Request;
 
@@ -24,6 +25,11 @@ class PostController extends Controller
             'post' => $post,
             'categories' => Category::all()
         ]);
+    }
+
+    public function create(){
+        
+        return view('posts.create');
     }
 
 }
