@@ -33,7 +33,17 @@ class PostController extends Controller
     }
 
     public function store(){
-        dd(request()->all());
+        $attributes = request()->validate([
+            'title' => 'required',
+            'slug' => ['required' , 'unique:posts'],
+            'excerpt' => 'required',
+            'body' => 'required',
+            'category_id' => ['required' , 'exists:categories,id']
+        ]);
+        
+        $attributes['user_id'] = auth()->id();
+        Post::create($attributes);
+        return redirect('/');
     }
 
 }
