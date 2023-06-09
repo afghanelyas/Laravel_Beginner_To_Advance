@@ -1,8 +1,8 @@
 @extends('components.layout')
 
 @section('content')
-<article class="bg-white border border-gray-200 mb-10 p-5 text-lg max-w-md m-auto shadow-md leading-loose ">
-    <form Method="POST" action="/admin/posts" class=" m-auto">
+<article class="bg-white border border-gray-200 mb-10 p-5 text-lg max-w-lg m-auto shadow-md leading-loose ">
+    <form Method="POST" action="/admin/posts" class=" m-auto " enctype="multipart/form-data">
         @csrf
         <h1 class="text-xl font-bold mb-10">Create New Post</h1>
         <div class="mb-5">
@@ -28,6 +28,17 @@
             <p class="text-red-500 text-xs mt-2">{{ $message }}</p>
             @enderror
         </div>
+
+        <div class="mb-5">
+            <label for="thumbnail" class="block mb-2 uppercase font-bold text-xs text-gray-700">
+                Thumbnail
+
+            </label>
+            <input type="file" name="thumbnail" id="thumbnail" class="border border-gray-400 p-2 w-full" required>
+            @error('thumbnail')
+            <p class="text-red-500 text-xs mt-2">{{ $message }}</p>
+            @enderror
+
 
         <div class="mb-5">
             <label for="excerpt" class="block mb-2 uppercase font-bold text-xs text-gray-700">
