@@ -1,8 +1,8 @@
 @extends('components.layout')
 
 @section('content')
-<article class="bg-white border border-gray-200 mb-10 p-5 text-lg max-w-sm m-auto shadow-md leading-loose ">
-    <form Method="POST" action="/admin/posts" class="max-w-sm m-auto">
+<article class="bg-white border border-gray-200 mb-10 p-5 text-lg max-w-md m-auto shadow-md leading-loose ">
+    <form Method="POST" action="/admin/posts" class=" m-auto">
         @csrf
         <h1 class="text-xl font-bold mb-10">Create New Post</h1>
         <div class="mb-5">

@@ -86,7 +86,7 @@
 
     @yield('content')
 
-    <footer class="bg-gray-200 rounded-md p-20 shadow-md mb-10 flex justify-center  ">
+    <footer class="bg-gray-100 rounded-md  shadow-md  flex justify-center fixed bottom-0 left-0 w-full  p-5 ">
         <form method="POST" action="newslatters" class=" sm:flex sm:max-w-md">
             @csrf
             <label for="email-address" class="sr-only">Email address</label>
