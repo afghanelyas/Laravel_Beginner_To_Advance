@@ -13,7 +13,7 @@
 </head>
 
 <body class="max-w-5xl m-auto">
-    <header class="bg-white relative w-full mb-20 shadow-sm lg:static lg:overflow-y-visible">
+    <header class="bg-white relative w-full mb-10 shadow-sm lg:static lg:overflow-y-visible">
         <div class="mx-auto px-4 sm:px-6 lg:px-8">
             <div class="relative flex justify-between lg:gap-8 xl:grid xl:grid-cols-12">
                 <div class="flex md:absolute md:inset-y-0 md:left-0 lg:static xl:col-span-2">
@@ -64,7 +64,7 @@
                         <x-dropdown-item href="/admin/posts/create" :active="request()->is('admin/posts/create')">New
                             Post
                         </x-dropdown-item>
-                        <x-dropdown-item href="#" x-data="{}" @click.prevent="document.querySelector('#logout-form').submit()">Log Out
+                    <x-dropdown-item href="#" x-data="{}" @click.prevent="document.querySelector('#logout-form').submit()">Log Out
                             <form method="POST" action="/logout" id="logout-form" class="ml-5 hidden">
                                 @csrf
                             </form>

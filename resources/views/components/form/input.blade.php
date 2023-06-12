@@ -5,7 +5,7 @@
             name="{{$name}}" 
             value="{{old($name)}}" 
             id="{{$name}}"
-            class="border border-gray-400 p-2 w-full" 
+            class="border border-gray-400 p-2 mt-3 w-full rounded" 
             required
             {{$attributes}}
             >

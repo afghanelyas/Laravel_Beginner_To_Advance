@@ -1,5 +1,5 @@
 @props(['hedding'])
-<div class=" max-w-md border-b-2">
+<div class=" max-w-full mb-10 border-b-2">
     <h1 class="text-lg font-bold mb-5">{{$hedding}}</h1>
 </div>
 <div class="flex">
@@ -14,7 +14,7 @@
 
 
     <main class="flex-1">
-        <article class="bg-white border border-gray-200 mb-10 p-5 text-lg max-w-lg m-auto shadow-md leading-loose ">
+        <article class="bg-white border border-gray-200 mb-40  p-5  text-lg max-w-lg m-auto shadow-md leading-loose ">
 
             {{ $slot}}
         </article>
