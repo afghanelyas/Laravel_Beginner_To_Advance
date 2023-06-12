@@ -1,16 +1,15 @@
 @extends('components.layout')
 
 @section('content')
-<article class="bg-white border border-gray-200 mb-10 p-5 text-lg max-w-lg m-auto shadow-md leading-loose ">
-    <form Method="POST" action="/admin/posts" class=" m-auto " enctype="multipart/form-data">
+
+<x-setting hedding="Publish new post">
+     <form Method="POST" action="/admin/posts" class=" m-auto " enctype="multipart/form-data">
         @csrf
-        <h1 class="text-xl font-bold mb-10">Create New Post</h1>
         <x-form.input name="title" />
         <x-form.input name="slug" />
         <x-form.input name="thumbnail" type="file" />
         <x-form.textarea name="excerpt" />
         <x-form.textarea name="body" />
-
 
         <x-form.field>
             <x-form.label name="Category" />
@@ -26,7 +25,6 @@
         <x-form.button>Publish</x-form.button>
 
     </form>
-
-</article>
+</x-setting>
 
 @endsection
