@@ -56,14 +56,21 @@
 
                 <div class="hidden lg:flex lg:items-center lg:justify-end xl:col-span-4">
                     @auth
-                    <span class="font-bold">{{ auth()->user()->name }}</span>
-                    <form method="POST" action="/logout" class="ml-5">
-                        @csrf
-                        <button type="submit"
-                            class="ml-5 flex-shrink-0 rounded-full bg-white p-1 text-gray-500 font-bold hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
-                            LOGOUT
-                        </button>
-                    </form>
+                    <x-dropdown>
+                        <x-slot name="trigger">
+                            <button class="font-bold">Welcome {{ auth()->user()->name }}</button>
+                        </x-slot>
+                        <x-dropdown-item href="/admin/Dashboard" :active="request()->is('admin/Dashboard')">Dashboard</x-dropdown-item>
+                        <x-dropdown-item href="/admin/posts/create" :active="request()->is('admin/posts/create')">New
+                            Post
+                        </x-dropdown-item>
+                        <x-dropdown-item href="#" x-data="{}" @click.prevent="document.querySelector('#logout-form').submit()">Log Out
+                            <form method="POST" action="/logout" id="logout-form" class="ml-5 hidden">
+                                @csrf
+                            </form>
+                        </x-dropdown-item>
+                        
+                    </x-dropdown>
                     @else
                     <a href="/register"
                         class="ml-5 flex-shrink-0 rounded-full bg-white p-1 font-bold text-gray-500 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
@@ -90,16 +97,16 @@
         <form method="POST" action="newslatters" class=" sm:flex sm:max-w-md">
             @csrf
             <label for="email-address" class="sr-only">Email address</label>
-           <div>
-           <input type="email" name="email" id="email-address" autocomplete="email" required
-                class="w-full min-w-0 appearance-none  rounded-md border-0 bg-white px-3 py-1.5 text-base text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:w-64 sm:text-sm sm:leading-6 xl:w-full"
-                placeholder="Enter your email">
-               
+            <div>
+                <input type="email" name="email" id="email-address" autocomplete="email" required
+                    class="w-full min-w-0 appearance-none  rounded-md border-0 bg-white px-3 py-1.5 text-base text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:w-64 sm:text-sm sm:leading-6 xl:w-full"
+                    placeholder="Enter your email">
+
                 @error('email')
                 <span class="text-red-500 text-xs mt-1">{{ $message }}</span>
                 @enderror
             </div>
-                
+
             <div class="mt-4 sm:ml-4 sm:mt-0 sm:flex-shrink-0">
                 <button type="submit"
                     class="flex w-full items-center justify-center rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
