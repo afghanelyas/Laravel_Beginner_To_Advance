@@ -2,7 +2,7 @@
 
 @section('content')
 
-<x-setting hedding="Manage Post">
+<x-setting heading="Manage Post">
     <div class="px-4 sm:px-6 lg:px-8">
 
         <div class="mt-8 flow-root">

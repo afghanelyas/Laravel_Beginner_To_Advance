@@ -2,12 +2,11 @@
 
 @section('content')
 
-<x-setting hedding="Publish new post">
+<x-setting heading="Publish new post">
      <form Method="POST" action="/admin/posts" class=" m-auto " enctype="multipart/form-data">
         @csrf
         <x-form.input name="title" />
         <x-form.input name="slug" />
-        <x-form.input name="thumbnail" type="file" />
         <x-form.textarea name="excerpt" />
         <x-form.textarea name="body" />
 

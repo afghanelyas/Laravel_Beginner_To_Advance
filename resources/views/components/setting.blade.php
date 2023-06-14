@@ -1,6 +1,6 @@
-@props(['hedding'])
+@props(['heading'])
 <div class=" max-w-full mb-10 border-b-2">
-    <h1 class="text-lg font-bold mb-5">{{$hedding}}</h1>
+    <h1 class="text-lg font-bold mb-5">{{$heading}}</h1>
 </div>
 <div class="flex">
     <aside class="w-48 flex-shrink-0">
