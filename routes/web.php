@@ -6,6 +6,7 @@ use App\Http\Controllers\PostCommentController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\SessionController;
 use App\Http\Controllers\NewsletterController;
+use App\Http\Controllers\AdminPostController;
 
 Route::post('newslatters', NewsletterController::class );
 
@@ -23,5 +24,9 @@ Route::post('login', [SessionController::class, 'store'])->middleware('guest');
 
 Route::post('logout', [SessionController::class, 'destroy'])->middleware('auth');
 
+//admin
 Route::get('admin/posts/create', [PostController::class, 'create'])->middleware('admin');
 Route::post('admin/posts', [PostController::class, 'store'])->middleware('admin');
+
+
+Route::get('admin/posts', [AdminPostController::class, 'index'])->middleware('admin');

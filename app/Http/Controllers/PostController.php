@@ -5,7 +5,9 @@ namespace App\Http\Controllers;
 use App\Models\Category;
 use App\Models\Post;
 use App\Models\User;
+
 use Illuminate\Http\Response;
+
 
 use Illuminate\Http\Request;
 
@@ -28,8 +30,7 @@ class PostController extends Controller
     }
 
     public function create(){
-        
-        return view('posts.create');
+        return view('admin.posts.create');
     }
 
     public function store(){

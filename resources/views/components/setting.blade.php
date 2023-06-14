@@ -6,8 +6,17 @@
     <aside class="w-48">
         <h4 class="font-semibold mb-4">Links</h4>
         <ul>
-            <li class="mb-2"><a href="/admin/posts" class="text-blue-500">All Posts</a></li> 
-           <li class="mb-2"><a href="/admin/posts/create" class="text-blue-500">New Post</a></li>
+            <li class="mb-2">
+                <a href="/admin/posts" class="{{request()->is('admin/posts') ? 'text-blue-500': ''}}">All
+                    Posts
+                </a>
+            </li>
+            <li class="mb-2">
+                <a href="/admin/posts/create"
+                    class="{{request()->is('admin/posts/create') ? 'text-blue-500': ''}}text-blue-500">
+                    New Post
+                </a>
+            </li>
         </ul>
     </aside>
 
