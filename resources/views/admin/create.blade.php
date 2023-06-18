@@ -10,6 +10,7 @@
         <x-form.textarea name="excerpt" />
         <x-form.textarea name="body" />
 
+
         <x-form.field>
             <x-form.label name="Category" />
             <select name="category" id="category_id" class="border mb-3 border-gray-400 p-2 w-full" required>

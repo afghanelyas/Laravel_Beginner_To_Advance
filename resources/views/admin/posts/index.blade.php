@@ -18,7 +18,7 @@
 
                                         <div class="ml-4">
                                             <div class="font-medium text-gray-900">
-                                              <a href="/posts/{{ $post->slug }}">{{$post->title}}</a>
+                                                <a href="/posts/{{ $post->slug }}">{{$post->title}}</a>
                                             </div>
                                         </div>
                                     </div>
@@ -30,7 +30,8 @@
                                 </td>
                                 <td
                                     class="relative whitespace-nowrap py-5 pl-3 pr-4 text-right text-sm font-medium sm:pr-0">
-                                    <a href="/admin/posts/{{$post->id}}/edit" class="text-blue-500 hover:text-blue-500">Edit</a>
+                                    <a href="/admin/posts/{{$post->id}}/edit"
+                                        class="text-blue-500 hover:text-blue-500">Edit</a>
                                 </td>
                             </tr>
                             @endforeach

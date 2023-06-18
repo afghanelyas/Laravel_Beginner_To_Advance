@@ -4,8 +4,6 @@ namespace App\Http\Controllers;
 use App\Models\Post;
 use Illuminate\Validation\Rule;
 
-use Illuminate\Http\Request;
-
 class AdminPostController extends Controller
 {
     public function index()
@@ -46,9 +44,9 @@ class AdminPostController extends Controller
             'body' => 'required',
             'category_id' => ['required' , Rule::exists('categories' , 'id')]
         ]);
-        
-       $post->update($attributes);
-       return back()->with('success' , 'Post Updated!');
+        $post->update($attributes);
+        return redirect('/');
+
     }
 
     

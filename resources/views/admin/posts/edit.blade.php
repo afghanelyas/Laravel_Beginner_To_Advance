@@ -3,7 +3,7 @@
 @section('content')
 
 <x-setting :heading="'Edit Post: ' . $post->title ">
-    <form Method="POST" action="/admin/posts/{{ $post->id }}" class=" m-auto " enctype="multipart/form-data">
+    <form Method="POST" action="/admin/posts/{{ $post->id }}" class=" m-auto max-w-full " enctype="multipart/form-data">
         @csrf
         @method('PATCH')
 
