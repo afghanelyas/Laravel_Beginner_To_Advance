@@ -14,7 +14,7 @@
 
         <x-form.field>
             <x-form.label name="Category" />
-            <select name="category" id="category_id" class="border mb-3 border-gray-400 p-2 w-full" required>
+            <select name="category_id" id="category_id" class="border mb-3 border-gray-400 p-2 w-full" required>
                 @foreach (\App\Models\Category::all() as $category)
                 <option value="{{ $category->id }}"
                     {{ old('category_id' , $post->category_id) == $category->id ? 'selected' : '' }}>
