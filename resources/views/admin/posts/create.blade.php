@@ -3,7 +3,7 @@
 @section('content')
 
 <x-setting heading="Publish new post">
-     <form Method="POST" action="/admin/posts" class=" m-auto " enctype="multipart/form-data">
+     <form Method="POST" action="/admin/posts" class=" m-auto p-5 " enctype="multipart/form-data">
         @csrf
         <x-form.input name="title" />
         <x-form.input name="slug" />
